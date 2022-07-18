@@ -1,0 +1,359 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+}
+
+/*CSS for Landing Page*/
+.landingPage {
+  /* order: 1; */
+  /* background-color: green; */
+  /* height: 100vh; */
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.welcomeText {
+  font-family: "Allura", cursive;
+  padding: 5px;
+  font-weight: 500;
+  position: absolute;
+  top: 70px;
+  left: 21vw;
+  /* right: 150px; */
+  display: block;
+  font-size: 5vmax;
+  /* background-color: aqua; */
+  color: rgb(255, 255, 255);
+  /* margin: auto; */
+}
+.landingPagePhoto {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.landingPagePhoto > img {
+  object-fit: cover;
+  /* object-position: center top; */
+  width: 100%;
+  height: auto;
+}
+
+/*CSS for BOOKING PORTAL*/
+h1 {
+  font-weight: 500;
+}
+main {
+  display: flex;
+  /* display: none; */
+  /* background-color: rgb(247, 247, 247); */
+}
+.booking-contnr {
+  display: flex;
+  margin-top: 60px;
+  margin-left: 10px;
+  flex-direction: column;
+  width: 91%;
+  height: fit-content;
+  max-width: 550px;
+  justify-content: center;
+}
+.booking-contnr-heading {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  background-color: rgb(36, 59, 123);
+  color: white;
+  padding: 10px;
+}
+.page-1 {
+  background-color: rgba(0, 178, 255, 0.43);
+  width: 55%;
+  font-size: 18px;
+  padding: 10px;
+}
+.booking-form-contnr {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.thnkUPage > img {
+  width: 20%;
+  margin: auto;
+  display: block;
+}
+.roomImage {
+  width: 40%;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.roomPhoto {
+  width: 100%;
+  height: auto;
+}
+#form-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#form-1 > label {
+  width: 100%;
+  margin: 5px auto;
+}
+#form-1 > label > input {
+  width: 95%;
+  border: none;
+  padding: 7px;
+  margin: auto;
+}
+#form-1 > label > select {
+  width: 100%;
+  border: none;
+  padding: 7px;
+  margin: auto;
+}
+#form-2 {
+  display: none;
+}
+.booking-confirm-contnr {
+  margin: auto;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.booking-confirm-contnr > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  border-bottom: 1px solid black;
+}
+.booking-confirm-contnr > div > p {
+  width: 50%;
+  padding: 10px;
+  font-size: 17px;
+}
+.page-2 {
+  width: 52%;
+  background-color: rgba(0, 178, 255, 0.43);
+  padding: 15px;
+}
+#form-2 {
+  width: 100%;
+  height: fit-content;
+}
+.page-2 > form > label > p {
+  margin: 10px 0px 3px;
+}
+.page-2 > form > label > input {
+  width: 100%;
+  border: none;
+  padding: 8px;
+}
+#proceedBtn {
+  width: 100%;
+  margin: 25px auto;
+  border: none;
+  padding: 17px;
+  background-color: rgb(36, 59, 123);
+  color: white;
+}
+button#confirm {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  background-color: rgba(0, 178, 255, 0.43);
+}
+.rightAlign {
+  text-align: right;
+}
+.payment-contnr {
+  width: 53%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  background-color: rgba(0, 178, 255, 0.43);
+}
+.validCardSection {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+p.amountInfo {
+  text-align: center;
+  font-size: 18px;
+  width: 97%;
+  background-color: rgb(22, 38, 46);
+  padding: 20px 5px;
+  font-weight: 500;
+  color: white;
+}
+.paymentDetails {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0.4em;
+  margin: 5px 7px;
+}
+.paymentDetails > div {
+  margin: 6px 0px;
+  width: 100%;
+  max-width: 500px;
+}
+.paymentDetails > div > label > input {
+  padding: 7px;
+}
+.expiry\+CVV-contnr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+input#CCV {
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding: 0.3em;
+}
+input#cardNo,
+input#ownerName {
+  text-align: left;
+  border: none;
+  width: 100%;
+  max-width: 500px;
+}
+.CVV-contnr {
+  width: 40%;
+}
+.expiryDate-contnr {
+  width: 55%;
+}
+input#expiryDate {
+  border: none;
+  padding: 0.3em;
+  width: 100%;
+}
+.payment-contnr {
+  padding-bottom: 10px;
+}
+button#payNowBtn {
+  margin-top: 16px;
+  padding: 0.9em;
+  border: none;
+  background-color: rgba(26, 26, 143, 0.83);
+  color: white;
+}
+.validCardSection > p {
+  font-size: 14px;
+  text-align: center;
+  padding: 0px 5px;
+}
+.card-icon-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 6px;
+}
+.cc-icon {
+  width: 18%;
+  height: auto;
+}
+hr {
+  background-color: rgb(102, 97, 97);
+  border: none;
+  height: 1px;
+  border-radius: 10px;
+}
+button.button {
+  border: none;
+  padding: 13px;
+  background-color: rgb(36, 59, 123);
+  color: white;
+}
+button:hover {
+  cursor: pointer;
+}
+.thnkUPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.thnkuIcons {
+  width: 50%;
+  height: fit-content;
+  text-align: center;
+}
+.thnkuIcons img {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 528px) {
+  .booking-form-contnr {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-1 {
+    width: 70%;
+    margin: 1px auto;
+  }
+  .roomImage {
+    width: 74%;
+    margin: auto;
+  }
+  .page-2 {
+    width: 75%;
+    margin: 10px auto;
+  }
+  .booking-confirm-contnr > div > p {
+    width: 50%;
+    padding: 10px;
+    font-size: 15px;
+  }
+  .payment-contnr {
+    width: 100%;
+  }
+}
+@media (max-width: 376px) {
+  .page-1 {
+    width: 90%;
+    margin: 17px auto;
+  }
+  .roomImage {
+    width: 95%;
+  }
+  .booking-confirm-contnr > div > p {
+    width: 50%;
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+p.finalMsg {
+  text-align: justify;
+  padding: 10px;
+}

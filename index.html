@@ -1,0 +1,280 @@
+<!--HOTEL BOOKING WEB APPLICATION-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HOTEL BOOKING WEB APPLICATION</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Space for google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="landingPage">
+      <p class="welcomeText">
+        A place for your beautiful vacation. <br />
+        What are you waiting for? Book now
+      </p>
+      <div class="landingPagePhoto">
+        <img src="image/landingpage3.jpg" alt="" />
+      </div>
+    </div>
+    <main>
+      <div class="booking-contnr">
+        <h1 class="booking-contnr-heading">booking-portal heading</h1>
+        <div class="booking-form-contnr">
+          <!--Booking portal page-1-->
+          <div class="page-1">
+            <form id="form-1">
+              <label for="checkIn">
+                <p>Select check-in date</p>
+                <input
+                  name="checkIn"
+                  id="checkIn"
+                  type="date"
+                  required
+                />
+              </label>
+              <label for="checkOut">
+                <p>Select check-out date</p>
+                <input
+                  name="checkOut"
+                  id="checkOut"
+                  type="date"
+                  required
+                />
+              </label>
+              <label for="noOfTenants">
+                <p>Number of tenants:</p>
+                <input
+                  id="noOfTenants"
+                  name="tenants"
+                  type="number"
+                  min="1"
+                  required
+                />
+                <br />
+              </label>
+              <label for="noOfRooms">
+                <p>Number of rooms:</p>
+                <input
+                  id="noOfRooms"
+                  name="rooms"
+                  type="number"
+                  min="1"
+                  requried
+                />
+              </label>
+              <br />
+              <label for="roomType">
+                <p>Select the type of room</p>
+                <select name="roomType" id="roomType">
+                  <option value="standard" selected>Standard</option>
+                  <option value="deluxe" >Deluxe</option>
+                  <option value="couple">Couple</option>
+                </select>
+              </label>
+              <br />
+
+              <button class="button" type="submit">Book now</button>
+            </form>
+          </div>
+          <div class="roomImage">
+            <img
+              id="standard"
+              class="roomPhoto"
+              src="rooms/standard.jpg"
+              alt="room image"
+            />
+            <img
+              id="couple"
+              class="roomPhoto"
+              src="rooms/couple.jpg"
+              alt="room image"
+            />
+            <img
+              id="deluxe"
+              class="roomPhoto"
+              src="rooms/deluxe.jpg"
+              alt="room image"
+            />
+          </div>
+
+          <!--Booking portal page-2-->
+          <div class="page-2">
+            <form id="form-2">
+              <label for="fname">
+                <p>First name</p>
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  required
+                />
+              </label>
+              <label for="lname">
+                <p>Last name</p>
+                <input
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  required
+                />
+              </label>
+              <label for="email">
+                <p>Email</p>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </label>
+              <br />
+              <button type="submit" id="proceedBtn">Proceed</button>
+            </form>
+          </div>
+
+          <!--booking-portal page-3 (confirmation page)-->
+          <div class="booking-confirm-contnr">
+            <div>
+              <p>Booking on the name</p>
+              <p class="rightAlign">
+                <span class="userNameFname">Abhijeet</span>
+                <span class="userNameLname">Gautam</span>
+              </p>
+            </div>
+            <div>
+              <p>Check In - Check Out</p>
+              <p class="rightAlign checkInOutDate">July 9, 2022</p>
+            </div>
+            <div>
+              <p>Duration of stay</p>
+              <p class="rightAlign nightsOfStay">2</p>
+            </div>
+            <div>
+              <p>Number of tenants</p>
+              <p class="rightAlign noOfTenants">5</p>
+            </div>
+            <div>
+              <p>Number of rooms</p>
+              <p class="rightAlign noOfRooms">2</p>
+            </div>
+            <div>
+              <p>Type of room</p>
+              <p class="rightAlign typeOfRooms">Couple</p>
+            </div>
+            <div>
+              <p>Amount payable</p>
+              <p class="rightAlign amountPayable">Rs. 10000</p>
+            </div>
+            <button id="confirm" type="submit">Confirm</button>
+          </div>
+
+          <!--payment gateway (credit card validation)-->
+          <div class="payment-contnr">
+            <p class="amountInfo">Amount payable : totalAmount</p>
+            <!-- <hr /> -->
+            <div class="validCardSection">
+              <p>We accept the following credit cards for payments</p>
+              <div class="card-icon-box">
+                <img class="cc-icon" src="cc-icons/cc-amex-brands.svg" alt="" />
+                <img
+                  class="cc-icon"
+                  src="cc-icons/cc-mastercard-brands.svg"
+                  alt=""
+                />
+                <img class="cc-icon" src="cc-icons/cc-visa-brands.svg" alt="" />
+              </div>
+            </div>
+            <form class="paymentDetails">
+              <div class="cardNumber-contnr">
+                <label for="cardNo">
+                  <p>CARD NUMBER</p>
+                  <input
+                    type="text"
+                    id="cardNo"
+                    name="cardNo"
+                    placeholder="Enter a valid card number"
+                    requried
+                  />
+                </label>
+              </div>
+              <div class="expiry+CVV-contnr">
+                <div class="expiryDate-contnr">
+                  <label for="expiryDate">
+                    <p>EXPIRATION DATE</p>
+                    <input
+                      type="text"
+                      name="expiryDate"
+                      id="expiryDate"
+                      placeholder="MM/YY"
+                    />
+                  </label>
+                </div>
+                <div class="CVV-contnr">
+                  <label for="CCV">
+                    <p>CCV</p>
+                    <input
+                      type="password"
+                      id="CCV"
+                      placeholder="CCV"
+                      maxlength="4"
+                      required
+                    />
+                  </label>
+                </div>
+              </div>
+              <div class="ownerName-contnr">
+                <label for="ownerName">
+                  <p>CARD HOLDER NAME</p>
+                  <input
+                    type="text"
+                    name="ownerName"
+                    id="ownerName"
+                    placeholder="Name on the CREDIT CARD"
+                    required
+                  />
+                </label>
+              </div>
+              <button id="payNowBtn" type="submit">Pay now</button>
+            </form>
+          </div>
+
+          <!--page-5: thankYou page-->
+          <div class="thnkUPage">
+            <div class="thnkuIcons">
+              <img id="cc" src="cc-icons/cc-amex-brands.svg" alt="" />
+            </div>
+            <p class="finalMsg">
+              You have completed the booking using
+              <strong class="ccName">amex</strong>. We thank you for this
+              booking and promise to ensure a smooth and happy stay at our hotel
+              for you.
+            </p>
+            <!-- <div id="tick" class="thnkuIcons">
+              <img src="tick.png" alt="" />
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="" async defer></script>
+  </body>
+</html>
